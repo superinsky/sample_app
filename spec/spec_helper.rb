@@ -9,7 +9,6 @@ end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
-  
 end
 
 # --- Instructions ---
@@ -54,4 +53,8 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
   
   ActiveSupport::Dependencies.clear
+  
+  def test_sign_in(user)
+    controller.sign_in(user)
+  end
 end
